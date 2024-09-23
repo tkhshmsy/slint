@@ -22,6 +22,7 @@ pico-st7789 = ["slint/unsafe-single-threaded", "rp-pico", "embedded-hal", "embed
 stm32h735g = ["slint/unsafe-single-threaded", "cortex-m/critical-section-single-core", "cortex-m-rt","embedded-alloc", "embedded-time", "stm32h7xx-hal/stm32h735", "defmt", "defmt-rtt", "embedded-display-controller", "ft5336", "panic-probe", "slint/libm", "getrandom"]
 esp32-s2-kaluga-1 = ["slint/unsafe-single-threaded", "esp-hal/esp32s2", "embedded-hal", "embedded-hal-bus", "esp-alloc", "esp-println/esp32s2", "display-interface", "display-interface-spi", "mipidsi", "embedded-graphics-core", "slint/libm"]
 esp32-s3-box = ["slint/unsafe-single-threaded", "esp-hal/esp32s3", "esp-hal/embedded-hal-02", "embedded-hal", "embedded-hal-bus", "esp-alloc", "esp-println/esp32s3", "esp-backtrace/esp32s3", "display-interface", "display-interface-spi", "mipidsi", "embedded-graphics-core", "slint/libm", "tt21100"]
+pico-crowpanelpicodisplay28 = ["slint/unsafe-single-threaded", "rp-pico", "embedded-hal", "embedded-hal-nb", "cortex-m-rt", "embedded-alloc", "fugit", "cortex-m", "display-interface", "display-interface-spi", "mipidsi", "defmt", "defmt-rtt", "slint/libm", "embedded-dma", "embedded-graphics", "euclid/libm"]
 
 [dependencies]
 slint = { version = "=1.7.2", path = "../../api/rs/slint", default-features = false, features = ["compat-1-2", "renderer-software"] }

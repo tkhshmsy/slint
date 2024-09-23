@@ -156,6 +156,20 @@ Now you can add the launch configuration to `.vscode/launch.json`:
 
 This was tested using a second Raspberry Pi Pico programmed as a probe with [DapperMime](https://github.com/majbthrd/DapperMime).
 
+### CrowPanel Pico Display-2.8 by Elecrow
+
+Components are as same as above RaspberryPi Pico with ST7789 display.
+* differencies
+  * Color inversion
+  * Backlight PWM control
+  * The direction of X axis of Touch panel
+
+```sh
+cargo build -p printerdemo_mcu --no-default-features --features=mcu-board-support/pico-crowpanelpicodisplay28 --target=thumbv6m-none-eabi --release
+elf2uf2-rs -d target/thumbv6m-none-eabi/release/printerdemo_mcu
+```
+
+
 ### STM32H735G-DK
 
 Using [probe-run](https://github.com/knurling-rs/probe-run) (`cargo install probe-run`)

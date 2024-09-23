@@ -10,6 +10,8 @@ fn main() -> std::io::Result<()> {
             board_config_path = Some([env!("CARGO_MANIFEST_DIR"), "pico_st7789", "board_config.toml"].iter().collect());
         } else if #[cfg(feature = "stm32h735g")] {
             board_config_path = Some([env!("CARGO_MANIFEST_DIR"), "stm32h735g", "board_config.toml"].iter().collect());
+        } else if #[cfg(feature = "pico-crowpanelpicodisplay28")] {
+            board_config_path = Some([env!("CARGO_MANIFEST_DIR"), "pico_crowpanelpicodisplay28", "board_config.toml"].iter().collect());
         }
     }
 
