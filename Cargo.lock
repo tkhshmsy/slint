@@ -4999,6 +4999,7 @@ dependencies = [
  "pin-weak",
  "rgb",
  "rp-pico",
+ "rp235x-hal",
  "slint",
  "stm32h7xx-hal",
  "tt21100",
@@ -6751,6 +6752,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "riscv-rt"
+version = "0.12.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c0d35e32cf1383183e8885d8a9aa4402a087fd094dc34c2cb6df6687d0229dfe"
+dependencies = [
+ "riscv",
+ "riscv-rt-macros",
+]
+
+[[package]]
 name = "riscv-rt-macros"
 version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -6779,6 +6790,19 @@ name = "roxmltree"
 version = "0.20.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6c20b6793b5c2fa6553b250154b78d6d0db37e72700ae35fad9387a46f487c97"
+
+[[package]]
+name = "rp-binary-info"
+version = "0.1.0"
+source = "git+https://github.com/rp-rs/rp-hal.git?rev=78169589757e1bc5abc350909ed10c6cddfbd145#78169589757e1bc5abc350909ed10c6cddfbd145"
+
+[[package]]
+name = "rp-hal-common"
+version = "0.1.0"
+source = "git+https://github.com/rp-rs/rp-hal.git?rev=78169589757e1bc5abc350909ed10c6cddfbd145#78169589757e1bc5abc350909ed10c6cddfbd145"
+dependencies = [
+ "fugit",
+]
 
 [[package]]
 name = "rp-pico"
@@ -6848,6 +6872,64 @@ name = "rp2040-pac"
 version = "0.6.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "83cbcd3f7a0ca7bbe61dc4eb7e202842bee4e27b769a7bf3a4a72fa399d6e404"
+dependencies = [
+ "cortex-m",
+ "cortex-m-rt",
+ "critical-section",
+ "vcell",
+]
+
+[[package]]
+name = "rp235x-hal"
+version = "0.2.0"
+source = "git+https://github.com/rp-rs/rp-hal.git?rev=78169589757e1bc5abc350909ed10c6cddfbd145#78169589757e1bc5abc350909ed10c6cddfbd145"
+dependencies = [
+ "bitfield 0.14.0",
+ "cortex-m",
+ "cortex-m-rt",
+ "critical-section",
+ "defmt",
+ "embedded-dma",
+ "embedded-hal 0.2.7",
+ "embedded-hal 1.0.0",
+ "embedded-hal-async",
+ "embedded-hal-nb",
+ "embedded-io",
+ "frunk",
+ "fugit",
+ "gcd",
+ "itertools 0.13.0",
+ "nb 1.1.0",
+ "paste",
+ "pio",
+ "rand_core",
+ "riscv",
+ "riscv-rt",
+ "rp-binary-info",
+ "rp-hal-common",
+ "rp235x-hal-macros",
+ "rp235x-pac",
+ "sha2-const-stable",
+ "usb-device",
+ "vcell",
+ "void",
+]
+
+[[package]]
+name = "rp235x-hal-macros"
+version = "0.1.0"
+source = "git+https://github.com/rp-rs/rp-hal.git?rev=78169589757e1bc5abc350909ed10c6cddfbd145#78169589757e1bc5abc350909ed10c6cddfbd145"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn 2.0.77",
+]
+
+[[package]]
+name = "rp235x-pac"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5ffcb6931deee4242886b5a1df62db5e2555b0eb6ae1e8be101f3ea3e58e65c6"
 dependencies = [
  "cortex-m",
  "cortex-m-rt",
@@ -7190,6 +7272,12 @@ dependencies = [
  "cpufeatures",
  "digest",
 ]
+
+[[package]]
+name = "sha2-const-stable"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5f179d4e11094a893b82fff208f74d448a7512f99f5a0acbd5c679b705f83ed9"
 
 [[package]]
 name = "shlex"

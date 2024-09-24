@@ -1,0 +1,17 @@
+# Copyright © SixtyFPS GmbH <info@slint.dev>
+# SPDX-License-Identifier: MIT
+
+link_args = [
+    "--nmagic",
+    "-Tlink.x",
+    "-Tdefmt.x",
+]
+link_search_path = [
+    "."
+]
+
+rustflags = [
+    "-C", "target-cpu=cortex-m33",
+]
+
+runner = "picotool load -u -v -x -t elf"

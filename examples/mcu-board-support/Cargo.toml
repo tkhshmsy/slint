@@ -23,6 +23,8 @@ stm32h735g = ["slint/unsafe-single-threaded", "cortex-m/critical-section-single-
 esp32-s2-kaluga-1 = ["slint/unsafe-single-threaded", "esp-hal/esp32s2", "embedded-hal", "embedded-hal-bus", "esp-alloc", "esp-println/esp32s2", "display-interface", "display-interface-spi", "mipidsi", "embedded-graphics-core", "slint/libm"]
 esp32-s3-box = ["slint/unsafe-single-threaded", "esp-hal/esp32s3", "esp-hal/embedded-hal-02", "embedded-hal", "embedded-hal-bus", "esp-alloc", "esp-println/esp32s3", "esp-backtrace/esp32s3", "display-interface", "display-interface-spi", "mipidsi", "embedded-graphics-core", "slint/libm", "tt21100"]
 
+pico2-st7789 = ["slint/unsafe-single-threaded", "rp235x-hal", "embedded-hal", "embedded-hal-nb", "cortex-m-rt", "embedded-alloc", "fugit", "cortex-m", "display-interface", "display-interface-spi", "mipidsi", "defmt", "defmt-rtt", "slint/libm", "embedded-dma", "embedded-graphics", "euclid/libm"]
+
 [dependencies]
 slint = { version = "=1.8.0", path = "../../api/rs/slint", default-features = false, features = ["compat-1-2", "renderer-software"] }
 i-slint-core-macros = { version = "=1.8.0", path = "../../internal/core-macros" }
@@ -65,6 +67,8 @@ embedded-graphics-core =  { version = "0.4", optional = true }
 defmt-rtt = { version = "0.4.0", optional = true }
 defmt = { version = "0.3.0", optional = true }
 panic-probe = { version = "0.3.0", optional = true, features = ["print-defmt"] }
+
+rp235x-hal = {git = "https://github.com/rp-rs/rp-hal.git", rev = "78169589757e1bc5abc350909ed10c6cddfbd145", version = "0.2.0", optional = true, features = ["binary-info", "critical-section-impl", "rt", "defmt"]}
 
 [build-dependencies]
 cfg-if = "1.0.0"

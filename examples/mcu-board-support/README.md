@@ -74,6 +74,18 @@ udisksctl mount -b /dev/sda1
 elf2uf2-rs -d target/thumbv6m-none-eabi/release/printerdemo_mcu
 ```
 
+## On the Raspberry Pi Pico 2
+
+Build with coretex-m33 target:
+```sh
+cargo build -p printerdemo_mcu --no-default-features --features=mcu-board-support/pico2-st7789 --target=thumbv8m.main-none-eabihf --release
+```
+
+Transfer with picotool:
+```sh
+picotool load -u -v -x -t elf ./target/thumbv8m.main-none-eabihf/release/printerdemo_mcu
+```
+
 #### Using probe-run
 
 This require [probe-run](https://github.com/knurling-rs/probe-run) (`cargo install probe-run`)
