@@ -22,6 +22,7 @@ pico-st7789 = ["slint/unsafe-single-threaded", "rp-pico", "embedded-hal", "embed
 stm32h735g = ["slint/unsafe-single-threaded", "cortex-m/critical-section-single-core", "cortex-m-rt","embedded-alloc", "embedded-time", "stm32h7xx-hal/stm32h735", "defmt", "defmt-rtt", "embedded-display-controller", "ft5336", "panic-probe", "slint/libm", "getrandom"]
 esp32-s2-kaluga-1 = ["slint/unsafe-single-threaded", "esp-hal/esp32s2", "embedded-hal", "embedded-hal-bus", "esp-alloc", "esp-println/esp32s2", "display-interface", "display-interface-spi", "mipidsi", "embedded-graphics-core", "slint/libm"]
 esp32-s3-box = ["slint/unsafe-single-threaded", "esp-hal/esp32s3", "esp-hal/embedded-hal-02", "embedded-hal", "embedded-hal-bus", "esp-alloc", "esp-println/esp32s3", "esp-backtrace/esp32s3", "display-interface", "display-interface-spi", "mipidsi", "embedded-graphics-core", "slint/libm", "tt21100"]
+esp32-s3-crowpanelterminal-35spi = ["slint/unsafe-single-threaded", "esp-hal/esp32s3", "esp-hal/embedded-hal-02", "embedded-hal", "embedded-hal-bus", "esp-alloc", "esp-println/esp32s3", "esp-backtrace/esp32s3", "display-interface", "display-interface-spi", "mipidsi", "embedded-graphics-core", "slint/libm", "ft6x36"]
 
 [dependencies]
 slint = { version = "=1.8.0", path = "../../api/rs/slint", default-features = false, features = ["compat-1-2", "renderer-software"] }
@@ -58,6 +59,7 @@ esp-alloc = { version = "0.4", optional = true }
 esp-println = { version = "0.11.0", optional = true }
 esp-backtrace = { version = "0.14.0", optional = true, features = ["panic-handler", "println"] }
 tt21100 = { version = "0.1", optional = true }
+ft6x36 = { version = "0.6.1", optional = true }
 
 mipidsi = { version = "0.8.0", optional = true }
 embedded-graphics-core =  { version = "0.4", optional = true }
